@@ -14,7 +14,7 @@ def createTextMessage(sender, action):
 	for i in savefile:
 		if sender == i.split(",,")[0]:
 			position = count
-		count++
+		count = count + 1
 	if position >= 0:
 		maps.position = savefile[count][1]
 
