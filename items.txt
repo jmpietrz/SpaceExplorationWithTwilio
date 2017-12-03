@@ -1,5 +1,5 @@
-1,,Access Keycard,,A keycard that allows you access to all parts of the ship.
-2,,Electrical Tool,,A tool used to replace fuses in a circuit.
-3,,Weapons Disabled,,Weapons are no longer firing erratically.
-4,,Short Fixed,,The flow of electricity is no longer disrupted.
-5,,Found What Happened,,You have discovered what happened to the ship.
+0,,Access Keycard,,A keycard that allows you access to all parts of the ship.
+1,,Electrical Tool,,A tool used to replace fuses in a circuit.
+2,,Weapons Disabled,,Weapons are no longer firing erratically.
+3,,Short Fixed,,The flow of electricity is no longer disrupted.
+4,,Found What Happened,,You have discovered what happened to the ship.
