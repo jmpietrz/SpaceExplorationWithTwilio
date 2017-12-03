@@ -1,5 +1,7 @@
 #!/usr/bin/env python
 
+import string
+
 class Room:
 	def __init__(self, items, id, description, up, right, down, left, objects):
 		self.id = id
@@ -16,18 +18,18 @@ class Room:
 					self.items.append(i)
 
 	def goDirection(self, direction):
-		goInDirection = -1
-		if (direction == "up"):
-			goInDirection = 0
-		elif (direction == "right"):
-			goInDirection == 1
-		elif (direction == "down"):
-			goInDirection == 2
-		elif (direction == "left"):
-			goInDirection = 3
-		if goInDirection == -1:
-			return -1;
-		return self.adjoiningRooms[goInDirection]
+		index = -1
+		if direction == "north":
+			index = 0
+		elif direction == "east":
+			index = 1
+		elif direction == "south":
+			index = 2
+		elif direction == "west":
+			index = 3
+		if index == -1:
+			return -1
+		return self.adjoiningRooms[index]
 
 class Item:
 	def __init__(self, id, name, description):
@@ -56,9 +58,9 @@ if __name__ == "__main__":
     maps = Map("rooms.txt", "items.txt")
     for i in maps.rooms:
     	print(i.description)
-    print("Going left in room 1: " + str(maps.rooms[0].goDirection("left")))
-    print("Going down in room 1: " + str(maps.rooms[0].goDirection("down")))
-    print("Going right in room 1: " + str(maps.rooms[0].goDirection("right")))
-    print("Going up in room 1: " + str(maps.rooms[0].goDirection("up")))
+    print("Going up in room 1: " + str(maps.rooms[0].goDirection("north")))
+    print("Going right in room 1: " + str(maps.rooms[0].goDirection("east")))
+    print("Going down in room 1: " + str(maps.rooms[0].goDirection("south")))
+    print("Going left in room 1: " + str(maps.rooms[0].goDirection("west")))
     for i in maps.rooms[0].adjoiningRooms:
     	print(str(i))
