@@ -1,10 +1,10 @@
-0,,A long and skinny room with many cots and what appears to be military uniforms on the walls.,,-1,-1,,1,,-1,,-1
-1,,A wide open room with many chairs and screens. In front of you is a spectacular view of Earth, and what appears to be a captains chair.,,0,,-1,,2,,3,,-1
-2,,A small room with a large central console displaying a 360* view of the ship.,,1,,-1,,-1,,3,,2
-3,,A tiny room filled with tools of various shapes and sizes.,,4,,1,,8,,6,,1
-4,,A grand bedroom with a single large bedroom with a nightstand beside it. The nightstand has a lamp and several documents on it.,,-1,,-1,,3,,-1,,0
-5,,A mess of wires and computers, with one wall dominated by a large box with a lightning bolt on it.,,4,,6,,-1,,-1,,3
-6,,An arc of electricity the size of your arm regularly goes from one side of the wall to the other. At the end of the hall you see a sign: "Authorized personel only",,4,,3,,7,,5,,-1
-7,,On a central table sits a cube.,,6,,9,,-1,,-1,,4
-8,,A locked door with a sign that says "Do not open",,3,,-1,,-1,,-1,,-1
-9,,A locked door with a sign that says "Do not open",,-1,,-1,,-1,,7,,-1
+0,,A long and skinny room with many cots and what appears to be military uniforms on the walls. There is a door to your South.,,-1,-1,,1,,-1,,-1
+1,,A wide open room with many chairs and screens. In front of you is a spectacular view of Earth, and what appears to be a captains chair.There are doors to your North, South, and West.,,0,,-1,,2,,3,,-1
+2,,A small room with a large central console displaying a 360* view of the ship. There are doors to your North and West.,,1,,-1,,-1,,3,,2
+3,,A tiny room filled with tools of various shapes and sizes. There are doors in all 4 directions.,,4,,1,,8,,6,,1
+4,,A grand bedroom with a single large bedroom with a nightstand beside it. The nightstand has a lamp and several documents on it. There is a door to your South.,,-1,,-1,,3,,-1,,0
+5,,A mess of wires and computers, with one wall dominated by a large box with a lightning bolt on it. There are doors to your North and East.,,4,,6,,-1,,-1,,3
+6,,An arc of electricity the size of your arm regularly goes from one side of the wall to the other. At the end of the hall you see a sign: "Authorized personel only". There are doors in all 4 directions.,,4,,3,,7,,5,,-1
+7,,On a central table sits a cube. There are doors to your North and East.,,6,,9,,-1,,-1,,4
+8,,A locked door with a sign that says "Do not open". Go North to return to your room.,,3,,-1,,-1,,-1,,-1
+9,,A locked door with a sign that says "Do not open". Go West to return to the room,,-1,,-1,,-1,,7,,-1
