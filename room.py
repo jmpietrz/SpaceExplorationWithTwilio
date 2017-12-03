@@ -75,4 +75,4 @@ def main():
     print("Going down in room 1: " + str(maps.rooms[0].goDirection("south")))
     print("Going left in room 1: " + str(maps.rooms[0].goDirection("west")))
 
-if __name__ == "__main__": main()
+#if __name__ == "__main__": main()
