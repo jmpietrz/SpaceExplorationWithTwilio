@@ -7,8 +7,9 @@ import room
 app = Flask(__name__)
 
 def createTextMessage(sender, action):
-	maps = Map("rooms.txt", "items.txt")
-	savefile = open("savefile", "rw").readlines()
+	maps = room.Map("rooms.txt", "items.txt")
+	save = open("savefile", "ra")
+	savefile = save.readlines()
 	position = -1
 	count = 0
 	for i in savefile:
@@ -17,7 +18,11 @@ def createTextMessage(sender, action):
 		count = count + 1
 	if position >= 0:
 		maps.position = savefile[count][1]
+	else:
+		save.write(sender, + ",," + "0\n")
 
+	returnValue = maps.performAction(action)
+	save.write(sender, ",," | maps.position + "\n")
 	return maps.performAction(action)
 
 
@@ -42,6 +47,5 @@ def sms_reply():
 	return str(resp)
 
 if __name__ == "__main__":
-	maps = new Map("room.txt", "items.txt")
 
     app.run(debug=True)
