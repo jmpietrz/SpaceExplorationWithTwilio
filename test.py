@@ -26,7 +26,6 @@ def createTextMessage(sender, action):
 
 @app.route("/sms", methods=['GET', 'POST'])
 def sms_reply():
-    """Respond to incoming calls with a simple text message."""
     # Start our TwiML response
     resp = MessagingResponse()
 	account_sid = "AC7fd1294880ac928421a5823df2c4e2d6"
