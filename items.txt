@@ -1,4 +1,3 @@
-id,,name,,description
 1,,Access Keycard,,A keycard that allows you access to all parts of the ship.
 2,,Electrical Tool,,A tool used to replace fuses in a circuit.
 3,,Weapons Disabled,,Weapons are no longer firing erratically.
