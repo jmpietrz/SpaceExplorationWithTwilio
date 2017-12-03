@@ -27,7 +27,7 @@ def createTextMessage(sender, action):
 @app.route("/sms", methods=['GET', 'POST'])
 def sms_reply():
     # Start our TwiML response
-    resp = MessagingResponse()
+	resp = MessagingResponse()
 	account_sid = "AC7fd1294880ac928421a5823df2c4e2d6"
 	auth_token = "08b348a6ef5d67db668511770d91f563"
 	client = Client(account_sid, auth_token)
@@ -37,9 +37,9 @@ def sms_reply():
 	returnText = createTextMessage(message.From, textCommand(message.body))
 
     # Add a message
-    resp.message(returnText)
+	resp.message(returnText)
 
-    return str(resp)
+	return str(resp)
 
 if __name__ == "__main__":
 	maps = new Map("room.txt", "items.txt")
