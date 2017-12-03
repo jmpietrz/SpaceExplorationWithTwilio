@@ -39,7 +39,7 @@ def sms_reply():
 	#message = client.messages.create(to="+16514916260",
 
 	message = client.messages.list()[-1] 
-	returnText = createTextMessage(message.From, textCommand(message.body))
+	returnText = createTextMessage(message.From, TextCommand(message.body))
 
     # Add a message
 	resp.message(returnText)
