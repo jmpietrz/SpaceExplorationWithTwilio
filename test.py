@@ -1,7 +1,28 @@
 from flask import Flask, request, redirect
 from twilio.twiml.messaging_response import MessagingResponse
+from twilio.rest import Client
+
+import room
 
 app = Flask(__name__)
+
+def createTextMessage(sender, action):
+	maps = Map("rooms.txt", "items.txt")
+	savefile = open("savefile", "rw").readlines()
+	position = -1
+	count = 0
+	for i in savefile:
+		if sender == i.split(",,")[0]:
+			position = count
+		count++
+	if position >= 0:
+		maps.position = savefile[count][1]
+
+	return maps.performAction(action)
+
+
+
+
 
 @app.route("/sms", methods=['GET', 'POST'])
 def sms_reply():
@@ -9,7 +30,15 @@ def sms_reply():
     # Start our TwiML response
     resp = MessagingResponse()
 
-    returnText = someFunction()
+	# Your Account SID from twilio.com/console
+	account_sid = "AC7fd1294880ac928421a5823df2c4e2d6"
+	# Your Auth Token from twilio.com/console
+	auth_token  = "08b348a6ef5d67db668511770d91f563"
+	client = Client(account_sid, auth_token)
+	#message = client.messages.create(to="+16514916260",
+
+	message = client.messages.list()[-1] 
+	returnText = createTextMessage(message.From, textCommand(message.body))
 
     # Add a message
     resp.message(returnText)
@@ -17,4 +46,6 @@ def sms_reply():
     return str(resp)
 
 if __name__ == "__main__":
+	maps = new Map("room.txt", "items.txt")
+
     app.run(debug=True)
