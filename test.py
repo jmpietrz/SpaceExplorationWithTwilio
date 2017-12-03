@@ -22,7 +22,7 @@ def createTextMessage(sender, action):
 		save.write(sender, + ",," + "0\n")
 
 	returnValue = maps.performAction(action)
-	save.write(sender, ",," | maps.position + "\n")
+	save.write(sender, ",," + maps.position + "\n")
 	return maps.performAction(action)
 
 
